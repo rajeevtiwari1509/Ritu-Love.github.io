@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ritu</title>
+
+<!-- footer typing -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- Love Theme Font -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Google Fonts Link  -->
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+<style>
+
+  /* ---------- TIM TIM TWINKLING STAR EFFECT ---------- */
+.stars, .stars2, .stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.stars {
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: twinkling 8s linear infinite;
+  opacity: 0.6;
+}
+
+.stars2 {
+  background-image: url("https://www.transparenttextures.com/patterns/tiny-cross-hatch.png");
+  animation: twinkling 12s linear infinite;
+  opacity: 0.4;
+}
+
+.stars3 {
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: twinkling 20s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes twinkling {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.3; }
+}
+
+ :root {
+      --accent1: #ff5fa0; /* pink */
+      --accent2: #7b50ff; /* purple */
+      --muted: #efe8f3; 
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #03020a;
+      color: var(--muted);
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer {
+      padding: 28px 12px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    #footerTyping {
+      font-family: 'Dancing Script', cursive; /* Love-theme font */
+      font-weight: 700;
+      font-size: 1.4rem;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+  :root{
+    --bg1: #03020a;
+    --bg2: #0b0712;
+    --accent1: #ff5fa0;
+    --accent2: #7b50ff;
+    --muted: #bfb7c6;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Merriweather",serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#efe8f3;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  header{position:fixed;left:0;right:0;top:14px;z-index:120;display:flex;justify-content:center;pointer-events:auto}
+  .nav{display:flex;gap:10px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));padding:8px 14px;border-radius:999px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.02)}
+  .nav a{font-weight:600;text-decoration:none;padding:8px 12px;border-radius:10px;color:var(--muted);font-size:0.95rem}
+  .nav a:hover{background:linear-gradient(90deg,var(--accent2),var(--accent1));-webkit-background-clip:text;color:transparent}
+  main{scroll-behavior:smooth}
+  .section{min-height:100vh;padding:120px 20px 80px 20px;display:flex;align-items:center;justify-content:center;position:relative}
+  .wrap{width:100%;max-width:1100px;margin:0 auto}
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:center;z-index:6;position:relative}
+  @media (max-width:920px){.hero{grid-template-columns:1fr}.hero-right{order:-1}}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:28px;border-radius:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 30px 90px rgba(0,0,0,0.7)}
+  .title {font-size:2.5rem;margin:0;line-height:1.2;font-weight:700;font-family:"Merriweather", serif;background:linear-gradient(90deg, var(--accent2), var(--accent1));-webkit-background-clip:text;color:transparent;}
+  .lead{color:var(--muted);margin-top:10px;font-size:1.05rem}
+  .controls{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+  .btn{background:linear-gradient(180deg,var(--accent1),var(--accent2));border:0;color:white;padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700;box-shadow:0 12px 36px rgba(120,60,140,0.12)}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);box-shadow:none}
+  .photo{width:100%;max-width:340px;height:220px;border-radius:14px;background-size:cover;background-position:center;border:3px solid rgba(255,255,255,0.03);box-shadow:0 22px 60px rgba(0,0,0,0.6);transition:transform .4s,filter .35s}
+  .photo:hover{transform:translateY(-8px) scale(1.02);filter:brightness(1.03)}
+  .poem-box{margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+  .poem-text{font-size:1.05rem;line-height:1.6;color:#e9e0eb;min-height:72px;white-space:pre-wrap}
+  .section-title{font-family:"Merriweather",serif;color:var(--accent2);font-size:1.4rem;margin:0}
+  .slideshow{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px;flex-wrap:wrap}
+  .slide{width:320px;height:200px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;border:4px solid rgba(255,255,255,0.03);box-shadow:0 18px 60px rgba(0,0,0,0.6);transition:transform .45s}
+  .slide.center{transform:scale(1.04)}
+  .footer{padding:28px 12px;text-align:center;color:var(--muted)}
+  .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:200;background:rgba(3,2,6,0.6);visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s}
+  .modal.show{visibility:visible;opacity:1}
+  .modal .inner{width:90%;max-width:760px;background:linear-gradient(180deg, rgba(10,6,12,0.98), rgba(15,9,18,0.99));padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 40px 120px rgba(0,0,0,0.7)}
+  .modal .close{float:right;background:none;border:0;color:var(--muted);font-size:22px;cursor:pointer}
+
+  /* canvas layers */
+  canvas#particleCanvas, canvas#neonCanvas {
+    position:fixed;
+    left:0; top:0;
+    width:100%; height:100%;
+    pointer-events:none; /* keep page elements clickable */
+  }
+  canvas#particleCanvas { z-index:1; }
+  canvas#neonCanvas { z-index:2; }
+
+  @media (max-width:520px){ .title{font-size:2rem} .photo{max-width:280px;height:160px} .slide{width:220px;height:140px} .hero{padding:12px} }
+</style>
+</head>
+<body>
+
+<!-- Background stars -->
+<div class="stars"></div>
+<div class="stars2"></div>
+<div class="stars3"></div>
+
+<!-- NAV -->
+<header>
+  <nav class="nav" role="navigation" aria-label="Main">
+<a href="#home" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">
+  Home</a>
+<a href="#quiet-grace" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">
+  Quiet Grace</a>
+<a href="#memories" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">
+  Memories</a>
+<a href="#gentle-glimpses" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">
+  Gentle Glimpses</a>
+<a href="#promise" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">
+  Promise</a>
+<a href="#letter" style="font-family: 'Dancing Script', cursive; color: deeppink; font-size: 1.2rem; text-decoration: none;">
+  Letter</a>
+  </nav>
+</header>
+
+<!-- Canvas layers for neon heart + particles + nebula -->
+<canvas id="neonCanvas" aria-hidden="true"></canvas>
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="section" aria-label="Home">
+    <div class="wrap">
+      <div class="hero">
+        <div class="card" style="position:relative;z-index:6">
+          <h2 class="title" style="font-family:'Dancing Script', cursive; font-weight:700; font-size:2.5rem; background:linear-gradient(90deg, #7b50ff, deeppink); 
+    -webkit-background-clip:text; color:transparent; text-align:center; line-height:1.2;">Ritu Ma’am — Quiet Elegance</h2>
+          <p style="font-family: 'Dancing Script', cursive; color: #ff5fa0; font-size: 1.35rem;">Your gentle guidance, your kindness 
+            and your quiet beauty stay with me in a way I cannot put into words</p>
+          <div class="controls" role="group" aria-label="Controls">
+  <button class="btn" id="playBtn" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color:white;">
+  Play Melody</button>
+  <button class="btn ghost" id="openPoem" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;">
+  Open Quiet Grace</button>
+<button class="btn ghost" id="openLetter" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;">
+  Quiet Note</button>
+          </div>
+
+          <div class="poem-box" aria-live="polite" aria-atomic="true">
+            <!-- Poem Preview Div -->
+          <div id="poemPreview" class="poem-text" style="font-family:'Allura', cursive; color:#c890ff; font-size:1.5rem;">
+          Click "Quiet Grace" to read softly whispered words…</div>
+          </div>
+        </div>
+
+        <aside class="hero-right" style="display:flex;flex-direction:column;gap:12px;align-items:center">
+          <div class="photo" id="p1" style="background-image:url('RituA.jpg')" role="img" aria-label="Photo 1"></div>
+          <div class="photo" id="p2" style="background-image:url('RituB.jpg')" role="img" aria-label="Photo 2"></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiet Grace -->
+  <section id="quiet-grace" class="section" aria-label="Poem">
+    <div class="wrap">
+      <div class="card center">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">Quiet Grace</h2>
+        <p style="font-family: 'Allura', cursive; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+          Soft Glimpses — her words and presence unfold slowly.</p>
+        <div style="margin-top:14px;display:flex;gap:12px;justify-content:center">
+          <button class="btn" id="startType" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: white;">
+           Whispered Words</button>
+          <button class="btn ghost" id="resetType" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;">
+           Reset</button>
+        </div>
+
+        <div class="poem-box" style="margin-top:18px">
+          <div id="typed" class="poem-text" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memories -->
+  <section id="memories" class="section" aria-label="Gallery">
+    <div class="wrap">
+      <div class="card">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">Images & Memories</h2>
+        <p style="font-family: 'Allura', cursive; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+          Swipe or use arrows to browse.</p>
+        <div class="slideshow" id="slideshow" style="margin-top:12px">
+          <div class="slide" id="prevSlide" style="background-image:url('RituC.jpg')"></div>
+          <div class="slide center" id="mainSlide" style="background-image:url('RituD.jpg')"></div>
+          <div class="slide" id="nextSlide" style="background-image:url('RituE.jpg')"></div>
+        </div>
+
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:12px">
+          <button class="btn" id="prevBtn">◀︎</button>
+          <button class="btn" id="nextBtn">▶︎</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gentle Glimpses -->
+  <section id="gentle-glimpses" class="section" aria-label="Gentle Glimpses">
+    <div class="wrap">
+      <div class="card center">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">Gentle Glimpses</h2>
+        <p style="font-family: 'Allura', cursive; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+          Ritu Ma’am, your trust means more to me than words can say. You understood me, guided me and accepted me as I'm —
+          and I will always honor the faith you showed.</p>
+
+         <audio controls autoplay> 
+          <source src="Barbaad_Reprise.mp3" type="audio/mpeg">
+            </audio>
+
+  <marquee bgcolor="transparent" scrollamount="6px" direction="right">          
+               <img src="ritu50.jpg" width="300">
+               <img src="ritu51.jpg" width="300">
+               <img src="ritu27.jpg" width="300">
+               <img src="ritu30.jpg" width="300">
+               <img src="ritu31.jpg" width="300">
+               <img src="ritu40.jpg" width="300">
+               <img src="ritu71.jpg" width="300">
+               <img src="ritu8.jpg" width="300">
+               <img src="ritu35.jpg" width="300">
+               <img src="ritu29.jpg" width="300">
+               <img src="ritu14.jpg" width="300">
+               <img src="ritu15.jpg" width="300">
+               <img src="ritu21.jpg" width="300">
+               <img src="ritu37.jpg" width="300">
+               <img src="ritu39.jpg" width="300">
+               <img src="ritu73.jpg" width="300">
+               <img src="ritu74.jpg" width="300">
+               <img src="ritu46.jpg" width="300">
+               <img src="ritu49.jpg" width="300">
+               <img src="ritu52.jpg" width="300">
+               <img src="ritu60.jpg" width="300">
+               <img src="ritu61.jpg" width="300">
+               <img src="ritu62.jpg" width="300">
+               <img src="ritu63.jpg" width="300">
+               <img src="ritu65.jpg" width="300">
+               <img src="ritu66.jpg" width="300">
+               <img src="ritu67.jpg" width="300">
+               <img src="ritu68.jpg" width="300">
+               <img src="ritu69.jpg" width="300">
+               <img src="ritu72.jpg" width="300">
+               <img src="ritu10.jpg" width="300">
+               <img src="ritu13.jpg" width="300">
+               <img src="ritu11.jpg" width="300">
+               <img src="ritu4.jpg" width="300">
+               <img src="ritu36.jpg" width="300">
+               <img src="ritu42.jpg" width="300">
+               <img src="ritu25.jpg" width="300">
+               <img src="ritu33.jpg" width="300">
+               <img src="ritu28.jpg" width="300">
+               <img src="ritu26.jpg" width="300">
+               <img src="ritu24.jpg" width="300">
+               <img src="ritu17.jpg" width="300">
+               <img src="ritu48.jpg" width="300">
+               <img src="ritu47.jpg" width="300">
+               <img src="ritu53.jpg" width="300">
+               <img src="ritu55.jpg" width="300">
+               <img src="ritu1.jpg" width="300">
+               <img src="ritu2.jpg" width="300"> 
+               <img src="ritu43.jpg" width="300">
+               <img src="ritu54.jpg" width="300">
+               <img src="ritu70.jpg" width="300">
+               </marquee>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <section id="promise" class="section" aria-label="Promise">
+    <div class="wrap">
+      <div class="card">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">A Promise</h2>
+        <p style="font-family: 'Allura', cursive !important; color: #c890ff; font-size: 1.5rem; margin-top: 8px;">
+         Ritu Ma’am, your trust means more to me than words can say. You understood me, guided me and accepted me as I'm —
+         and I will always honor the faith you showed.</p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center">
+<button class="btn" id="openModal" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: white;">
+  Read Quiet Note</button>
+<button class="btn ghost" id="downloadBtn" style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: #ff6f61;;">
+  Download Letter</button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section id="letter" class="section" aria-label="Letter">
+    <div class="wrap">
+      <div class="card center">
+        <h2 class="section-title" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem;">A Quiet Letter</h2>
+        <p style="font-family: 'Allura', cursive; color: #ff5fa0; font-size: 1.5rem; margin-top: 8px; line-height: 1.6;">
+  Dear Ritu Ma’am,
+  <br>
+  I want to sincerely thank you for your guidance and patience. You have accepted me with my flaws, shared your wisdom, and shown care that I deeply cherish.
+  Every lesson, every word, and every kind gesture stays with me. I respect you greatly, and I will always honor the trust you have placed in me.
+  This page is made for you — simple, respectful, and filled with quiet admiration for your grace, wisdom, and warmth.
+  <br>
+  Thank you Ritu Ma'am for being such an inspiring guide.
+
+      </div>
+      <div class="footer" style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem; text-align: center;">
+       Made with heart❤️& deep respect for Ritu Ma’am<br><span id="footerTyping"></span></div>
+     </div>
+  </section>
+
+</main>
+
+<!-- modal long note -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="inner" role="document">
+    <button class="close" id="closeModal" aria-label="Close">✕</button>
+    <h3 style="font-family: 'Allura', cursive; color: deeppink; font-size: 1.6rem; margin-top: 2px;">Quiet Note</h3>
+   <p style="font-family: 'Allura', cursive; color: #ff5fa0; font-size: 1.5rem; line-height: 1.7; margin-top: 8px;" id="longNote">
+    Ritu Ma’am — Your guidance and presence mean a great deal. I deeply respect your trust and will always honor it.</p>
+  </div>
+</div>
+
+<!-- audio (user gesture required to play) -->
+<audio id="bgAudio" src="Saiyaara Reprise.mp3" loop preload="auto"></audio>
+
+<script>
+
+/* --------- Ritu ma'am typing text --------- */
+const footerTyping = document.getElementById('footerTyping');
+    const text = "R it's u — Always thankful";
+    let idx = 0;
+    let forward = true;
+
+    function typeFooterLoop() {
+      if(forward){
+          footerTyping.textContent += text[idx];
+          idx++;
+          if(idx >= text.length){
+              forward = false;
+              setTimeout(typeFooterLoop, 1000); // pause at end
+              return;
+          }
+      } else {
+          footerTyping.textContent = '';
+          idx = 0;
+          forward = true;
+      }
+      setTimeout(typeFooterLoop, 250); // typing speed
+    }
+
+    typeFooterLoop();
+
+/* --------- Page UI: audio, poem, modal, slideshow (from your earlier code) --------- */
+const bg = document.getElementById('bgAudio');
+const playBtn = document.getElementById('playBtn');
+let playing = false;
+function updatePlayText(){ playBtn.textContent = playing ? 'Pause Melody' : 'Play Melody'; }
+playBtn.addEventListener('click', async (e)=>{
+  e.preventDefault();
+  try {
+    if(bg.paused){ await bg.play(); playing = true; }
+    else { bg.pause(); playing = false; }
+  } catch(err){ playing = false; }
+  updatePlayText();
+});
+document.addEventListener('click', function enableOnce(){
+  if(bg.paused){ bg.play().then(()=>{ playing=true; updatePlayText(); }).catch(()=>{}); }
+  document.removeEventListener('click', enableOnce);
+});
+
+const poemLines = [
+  "Your guidance lights paths I didn’t know existed, softly and steadily.",
+  "There’s a quiet strength and natural elegance in your words that stays with me long after they are spoken.",
+  "Simplicity, grace, and gentle beauty follow you like a soft shadow — always inspiring, always kind.",
+  "For all you’ve taught and shared, I hold a quiet gratitude for your elegance, warmth, and presence that words cannot fully capture."
+];
+
+const typedEl = document.getElementById('typed');
+let typing=false;
+document.getElementById('startType').addEventListener('click', ()=> startTyping(poemLines, typedEl));
+document.getElementById('resetType').addEventListener('click', ()=> { typedEl.textContent=''; typing=false; });
+
+function startTyping(lines, el){
+  if(typing) return;
+  typing = true;
+  el.textContent = '';
+  let i = 0;
+  function next(){
+    if(i >= lines.length){ typing=false; return; }
+    typeLine(lines[i], el, ()=>{ i++; setTimeout(next, 600); });
+  }
+  next();
+}
+function typeLine(text, el, cb){
+  let idx=0;
+  const speed = 20 + Math.random()*25;
+  el.textContent += '\n';
+  const t = setInterval(()=>{
+    el.textContent += text[idx] || '';
+    idx++;
+    if(idx > text.length){ clearInterval(t); cb(); }
+  }, speed);
+}
+document.getElementById('openPoem').addEventListener('click', ()=>{
+  startTyping(poemLines, typedEl);
+  location.hash = '#poem';
+  document.getElementById('poemPreview').textContent = poemLines.join('\n');
+});
+
+const modal = document.getElementById('modal');
+document.getElementById('openLetter').addEventListener('click', ()=> { modal.classList.add('show'); modal.style.visibility='visible'; modal.setAttribute('aria-hidden','false'); });
+document.getElementById('openModal').addEventListener('click', ()=> { modal.classList.add('show'); modal.style.visibility='visible'; modal.setAttribute('aria-hidden','false'); });
+document.getElementById('closeModal').addEventListener('click', ()=> { modal.classList.remove('show'); modal.style.visibility='hidden'; modal.setAttribute('aria-hidden','true'); });
+window.addEventListener('keydown', e=> { if(e.key==='Escape') { modal.classList.remove('show'); modal.style.visibility='hidden'; modal.setAttribute('aria-hidden','true'); } });
+
+document.getElementById('downloadBtn').addEventListener('click', ()=>{
+  const text = `Midnight Note for Ritu\n\n${document.getElementById('longNote').innerText}\n\n— Rajeev`;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'Midnight_Note_for_Ritu.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+
+/* --------- 
+let slides = ['assets/images/placeholder2.jpg','assets/images/placeholder1.jpg','assets/images/placeholder3.jpg'];
+let idx = 1;
+const prevSlide = document.getElementById('prevSlide');
+const mainSlide = document.getElementById('mainSlide');
+const nextSlide = document.getElementById('nextSlide');
+function renderSlides(){
+  if(prevSlide) prevSlide.style.backgroundImage = `url('${slides[(idx-1+slides.length)%slides.length]}')`;
+  if(mainSlide) mainSlide.style.backgroundImage = `url('${slides[idx%slides.length]}')`;
+  if(nextSlide) nextSlide.style.backgroundImage = `url('${slides[(idx+1)%slides.length]}')`;
+}
+renderSlides();
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+if(prevBtn) prevBtn.addEventListener('click', ()=>{ idx = (idx-1+slides.length)%slides.length; renderSlides(); });
+if(nextBtn) nextBtn.addEventListener('click', ()=>{ idx = (idx+1)%slides.length; renderSlides(); });
+let startX=0;
+const slideArea = document.getElementById('slideshow');
+if(slideArea){
+  slideArea.addEventListener('touchstart', e=> startX = e.touches[0].clientX);
+  slideArea.addEventListener('touchend', e=> { const endX = e.changedTouches[0].clientX; if(startX - endX > 40) { if(nextBtn) nextBtn.click(); } if(endX - startX > 40) { if(prevBtn) prevBtn.click(); } });
+} --------- */
+
+/* --------- CANVAS EFFECTS: dots + neon heart + click burst hearts --------- */
+const neonCanvas = document.getElementById('neonCanvas');
+const particleCanvas = document.getElementById('particleCanvas');
+
+const nctx = neonCanvas.getContext('2d');
+const pctx = particleCanvas.getContext('2d');
+
+let W = neonCanvas.width = particleCanvas.width = innerWidth;
+let H = neonCanvas.height = particleCanvas.height = innerHeight;
+
+/* utility */
+function rand(a,b){ return Math.random()*(b-a)+a; }
+
+/* ---------- background floating dots (red + purple) ---------- */
+const dots = [];
+
+/* Dots slightly reduced, but still screen-adaptive */
+const DOT_COUNT = Math.round(Math.max(60, (W * H) / (2600 * 1)));
+
+for (let i = 0; i < DOT_COUNT; i++) {
+  dots.push({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    r: Math.random() * 2 + 0.8,
+    sx: (Math.random() - 0.5) * 0.45,
+    sy: (Math.random() - 0.5) * 0.45,
+
+    /* SAME COLORS — only switching between purple + red */ 
+    color: Math.random() < 0.5 ? 'mediumvioletred' : 'deeppink'
+  });
+}
+
+/* ---------- burst hearts (spawn on click) ---------- */
+let hearts = [];
+function Heart(x,y,dx,dy,size,hue){
+  this.x=x; this.y=y; this.dx=dx; this.dy=dy; this.size=size; this.hue=hue; this.alpha=1;
+}
+Heart.prototype.update = function(dt){
+  this.x += this.dx*dt;
+  this.y += this.dy*dt;
+  this.dy += 180 * dt; // gravity
+  this.alpha -= 0.012 * dt * 60;
+  this.size *= 0.997;
+};
+Heart.prototype.draw = function(ctx){
+  ctx.save();
+  ctx.translate(this.x, this.y);
+  ctx.scale(this.size/40, this.size/40);
+  ctx.beginPath();
+  ctx.moveTo(0,-12);
+  ctx.bezierCurveTo(12,-40,52,-18,0,32);
+  ctx.bezierCurveTo(-52,-18,-12,-40,0,-12);
+  ctx.closePath();
+  ctx.fillStyle = `hsla(${this.hue},85%,60%,${Math.max(0,this.alpha)})`;
+  ctx.fill();
+  ctx.restore();
+};
+function spawnHearts(x,y,n=8){
+  for(let i=0;i<n;i++){
+    hearts.push(new Heart(
+      x + rand(-14,14),
+      y + rand(-14,14),
+      rand(-160,160),
+      rand(-420,-80),
+      rand(12,36),
+      rand(300,360)
+    ));
+  }
+}
+
+/* ---------- small glowing particles (nebula) ---------- */
+let smallParticles = [];
+function Particle(x,y,dx,dy,size,hue){
+  this.x=x; this.y=y; this.dx=dx; this.dy=dy; this.size=size; this.hue=hue; this.alpha=1;
+}
+Particle.prototype.update = function(dt){
+  this.x += this.dx*dt; this.y += this.dy*dt;
+  this.alpha -= 0.004 * dt * 60;
+  this.size *= 0.998;
+};
+Particle.prototype.draw = function(ctx){
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.closePath();
+  ctx.fillStyle = `hsla(${this.hue},65%,60%,${Math.max(0,this.alpha*0.35)})`; ctx.fill();
+  ctx.restore();
+};
+function spawnParticles(x,y,n=6){
+  for(let i=0;i<n;i++){
+    smallParticles.push(new Particle(
+      x + rand(-60,60),
+      y + rand(-60,60),
+      rand(-12,12),
+      rand(-6,6),
+      rand(6,26),
+      rand(280,340)
+    ));
+  }
+}
+
+/* ---------- neon parametric heart (single, top-center) ---------- */ 
+function drawNeonHeart(ctx,cx,cy,size,t){
+  ctx.save();
+  ctx.translate(cx,cy);
+  ctx.globalCompositeOperation = 'lighter';
+  const hue = 320 + Math.sin(t*1.2)*20;
+
+  // parametric heart (familiar 16*sin^3 etc)
+  ctx.beginPath();
+  for(let a=0; a < Math.PI*2 + 0.001; a += 0.03){
+    // classic heart parametric
+    const x = 16 * Math.pow(Math.sin(a),3);
+    const y = 13*Math.cos(a) - 5*Math.cos(2*a) - 2*Math.cos(3*a) - Math.cos(4*a);
+    const sx = x * size * 0.04;
+    const sy = -y * size * 0.04; // invert Y for canvas
+    if(a === 0) ctx.moveTo(sx, sy);
+    else ctx.lineTo(sx, sy);
+  }
+
+  // multi-stroke neon
+  for(let w=18; w>0; w-=3){
+    ctx.strokeStyle = `hsla(${hue},92%,62%,${0.02 + (18-w)/40})`;
+    ctx.lineWidth = w;
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+/* ---------- main loop ---------- */
+let last = performance.now();
+function animate(now){
+  const dt = (now - last)/1000;
+  last = now;
+
+  // clear canvases
+  pctx.clearRect(0,0,W,H);
+  nctx.clearRect(0,0,W,H);
+
+  // subtle neon gradient background (on neon canvas)
+  const g = nctx.createLinearGradient(0,0,W,H);
+  g.addColorStop(0,'rgba(123,75,255,0.015)'); g.addColorStop(1,'rgba(255,95,154,0.008)');
+  nctx.fillStyle = g; nctx.fillRect(0,0,W,H);
+
+  // draw dots (background)
+  for(let d of dots){
+    d.x += d.sx;
+    d.y += d.sy;
+    if(d.x < -20) d.x = W + 20;
+    if(d.x > W + 20) d.x = -20;
+    if(d.y < -20) d.y = H + 20;
+    if(d.y > H + 20) d.y = -20;
+
+    pctx.beginPath();
+    pctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
+    pctx.fillStyle = d.color;
+    pctx.fill();
+  }
+
+  // update & draw small particles
+  for(let i = smallParticles.length-1; i>=0; i--){
+    const sp = smallParticles[i];
+    sp.update(dt);
+    if(sp.alpha <= 0.01 || sp.size < 0.5) smallParticles.splice(i,1);
+    else sp.draw(nctx);
+  }
+
+  // update & draw hearts (burst)
+  for(let i = hearts.length-1; i>=0; i--){
+    const h = hearts[i];
+    h.update(dt);
+    if(h.alpha <= 0.01 || h.size < 1 || h.y > H + 80) hearts.splice(i,1);
+    else h.draw(nctx);
+  }
+
+  // draw single neon heart at top-center (slightly above center)
+ drawNeonHeart(nctx, W * 0.5, H * 0.40, Math.min(500, W * 0.40), now * 0.001); 
+
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+
+/* ---------- ambient spawns to keep scene lively ---------- */
+setInterval(()=> spawnParticles(rand(60, W-60), rand(60, H-60), 5), 1100);
+setInterval(()=> spawnParticles(rand(60, W-60), rand(60, H-60), 4), 1700);
+setInterval(()=> spawnHearts(rand(80, W-80), rand(H-220, H-80), 4), 2400);
+
+/* ---------- interactions: click anywhere on page spawns hearts/particles ---------- */
+document.addEventListener('click', (e) => {
+  // If clicking a UI control (button/link) it's still fine to spawn - canvas pointer-events none allows underlying elements to receive click
+  spawnHearts(e.clientX, e.clientY, 8);
+  spawnParticles(e.clientX, e.clientY, 6);
+});
+
+/* ---------- small hover triggers for your photos (optional) ---------- */
+const p1 = document.getElementById('p1');
+const p2 = document.getElementById('p2');
+if(p1) p1.addEventListener('mouseenter', ()=> spawnHearts(window.innerWidth*0.6, window.innerHeight*0.32, 10));
+if(p2) p2.addEventListener('mouseenter', ()=> spawnHearts(window.innerWidth*0.75, window.innerHeight*0.48, 8));
+
+/* ---------- resize handler ---------- */
+window.addEventListener('resize', ()=>{
+  W = neonCanvas.width = particleCanvas.width = innerWidth;
+  H = neonCanvas.height = particleCanvas.height = innerHeight;
+  // adjust dots count a bit if needed (kept simple — existing dots remain)
+});
+
+/* accessibility: close modal on Esc */
+window.addEventListener('keydown', (e)=> { if(e.key === 'Escape') { modal.classList.remove('show'); modal.style.visibility='hidden'; modal.setAttribute('aria-hidden','true'); } });
+
+</script>
+
+</body>
+</html>
